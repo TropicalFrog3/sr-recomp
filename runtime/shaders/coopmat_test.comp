@@ -1,0 +1,48 @@
+#version 460
+#extension GL_KHR_cooperative_matrix : require
+#extension GL_KHR_memory_scope_semantics : require
+#extension GL_EXT_shader_explicit_arithmetic_types_float16 : require
+#extension GL_KHR_shader_subgroup_basic : require
+
+layout(local_size_x = 32) in;
+layout(std430, set = 0, binding = 0) buffer Buf { uint d[]; } buf;
+
+layout(constant_id = 1024) const int MMA_A0 = 0;
+layout(constant_id = 1025) const int MMA_A1 = 1;
+layout(constant_id = 1026) const int MMA_A2 = 2;
+layout(constant_id = 1027) const int MMA_A3 = 3;
+layout(constant_id = 1028) const int MMA_A4 = 4;
+layout(constant_id = 1029) const int MMA_A5 = 5;
+layout(constant_id = 1030) const int MMA_A6 = 6;
+layout(constant_id = 1031) const int MMA_A7 = 7;
+layout(constant_id = 1032) const int MMA_B0 = 0;
+layout(constant_id = 1033) const int MMA_B1 = 1;
+layout(constant_id = 1034) const int MMA_B2 = 2;
+layout(constant_id = 1035) const int MMA_B3 = 3;
+layout(constant_id = 1036) const int MMA_C0 = 0;
+layout(constant_id = 1037) const int MMA_C1 = 1;
+layout(constant_id = 1038) const int MMA_C2 = 2;
+layout(constant_id = 1039) const int MMA_C3 = 3;
+
+void hmma(uint a0, uint a1, uint a2, uint a3, uint b0, uint b1, uint c0, uint c1, out uint d0, out uint d1) {
+    coopmat<float16_t, gl_ScopeSubgroup, 16, 16, gl_MatrixUseA> ma;
+    coopmat<float16_t, gl_ScopeSubgroup, 16, 8, gl_MatrixUseB> mb;
+    coopmat<float16_t, gl_ScopeSubgroup, 16, 8, gl_MatrixUseAccumulator> mc;
+    f16vec2 pa0 = unpackFloat2x16(a0), pa1 = unpackFloat2x16(a1), pa2 = unpackFloat2x16(a2), pa3 = unpackFloat2x16(a3);
+    f16vec2 pb0 = unpackFloat2x16(b0), pb1 = unpackFloat2x16(b1), pc0 = unpackFloat2x16(c0), pc1 = unpackFloat2x16(c1);
+    ma[MMA_A0] = pa0.x; ma[MMA_A1] = pa0.y; ma[MMA_A2] = pa1.x; ma[MMA_A3] = pa1.y;
+    ma[MMA_A4] = pa2.x; ma[MMA_A5] = pa2.y; ma[MMA_A6] = pa3.x; ma[MMA_A7] = pa3.y;
+    mb[MMA_B0] = pb0.x; mb[MMA_B1] = pb0.y; mb[MMA_B2] = pb1.x; mb[MMA_B3] = pb1.y;
+    mc[MMA_C0] = pc0.x; mc[MMA_C1] = pc0.y; mc[MMA_C2] = pc1.x; mc[MMA_C3] = pc1.y;
+    coopmat<float16_t, gl_ScopeSubgroup, 16, 8, gl_MatrixUseAccumulator> md = coopMatMulAdd(ma, mb, mc);
+    d0 = packFloat2x16(f16vec2(md[MMA_C0], md[MMA_C1]));
+    d1 = packFloat2x16(f16vec2(md[MMA_C2], md[MMA_C3]));
+}
+
+void main() {
+    uint lane = gl_SubgroupInvocationID, in_base = lane * 8u, out_base = 256u + lane * 2u, d0, d1;
+    hmma(buf.d[in_base + 0u], buf.d[in_base + 1u], buf.d[in_base + 2u], buf.d[in_base + 3u],
+         buf.d[in_base + 4u], buf.d[in_base + 5u], buf.d[in_base + 6u], buf.d[in_base + 7u], d0, d1);
+    buf.d[out_base + 0u] = d0;
+    buf.d[out_base + 1u] = d1;
+}

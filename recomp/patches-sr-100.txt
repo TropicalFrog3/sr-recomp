@@ -1,0 +1,144 @@
+# main: 135 spin waits
+spin main e2a80 e2a98   # 7 instructions; loads
+spin main 178e40 178f74   # 17 instructions; loads
+spin main 181e2c 181e44 181e60   # 13 instructions; loads
+spin main 237da8 237e5c   # 19 instructions; stc
+spin main 5ee1c4 5ee1d8 5ee218   # 10 instructions; loads
+spin main 6a4040 6a40a4   # 9 instructions; loads
+spin main 6b3524 6b357c   # 14 instructions; loads
+spin main 6f135c 6f14b4 6f14bc 6f14c4   # 13 instructions; stc
+spin main 707320 707330   # 5 instructions; loads
+spin main 8a1b24 8a1b30   # 4 instructions; loads
+spin main 9ae768 9ae804   # 6 instructions; loads
+spin main 9e46f0 9e4718   # 11 instructions; loads
+spin main a26da4 a26db8   # 6 instructions; loads
+spin main a9fe00 a9fe14   # 6 instructions; loads
+spin main b49588 b49624   # 6 instructions; loads
+spin main b9dae8 b9db84   # 6 instructions; loads
+spin main 1142aa4 1142b2c   # 18 instructions; loads
+spin main 11944a8 11944cc   # 10 instructions; loads
+spin main 1210350 1210358   # 3 instructions; loads
+spin main 1233060 12330a8 12330b4   # 9 instructions; loads
+spin main 127c588 127c5cc 127c5d8   # 8 instructions; loads
+spin main 1292d48 1292d58   # 5 instructions; loads
+spin main 12b2ec4 12b2f30 12b2f38   # 13 instructions; loads
+spin main 14da90c 14da968   # 10 instructions; loads
+spin main 2710ca4 2710cb0   # 4 instructions; loads
+spin main 272f9ec 272fa4c   # 9 instructions; loads
+spin main 272fd60 272fd6c   # 4 instructions; loads
+spin main 2731404 2731418   # 6 instructions; loads
+spin main 27675e0 27675ec   # 4 instructions; loads
+spin main 278aae0 278aaec   # 4 instructions; loads
+spin main 27b172c 27b1738   # 4 instructions; loads
+spin main 29576c0 29576cc   # 4 instructions; loads
+spin main 2957d24 2957d30   # 4 instructions; loads
+spin main 2957dec 2957df8   # 4 instructions; loads
+spin main 29869c0 29869cc   # 4 instructions; loads
+spin main 2a330f0 2a330f8   # 3 instructions; loads
+spin main 2a35500 2a3558c   # 12 instructions; loads
+spin main 2a36460 2a364ec   # 12 instructions; loads
+spin main 2a6bbec 2a6bc04 2a6bc0c   # 9 instructions; loads
+spin main 2a6bca8 2a6bcc0 2a6bcc8   # 9 instructions; loads
+spin main 2a6bd48 2a6bd60 2a6bd68   # 9 instructions; loads
+spin main 2a6bdc8 2a6bde0 2a6bde8   # 9 instructions; loads
+spin main 2a6bf2c 2a6bf44 2a6bf4c   # 9 instructions; loads
+spin main 2a6bfa8 2a6bfc0 2a6bfc8   # 9 instructions; loads
+spin main 2a96bcc 2a96be0   # 4 instructions; loads
+spin main 2a9db60 2a9dbb8   # 9 instructions; loads
+spin main 2a9dbc8 2a9dc1c   # 9 instructions; loads
+spin main 2a9dc24 2a9dc78   # 9 instructions; loads
+spin main 2a9dc80 2a9dcd8   # 9 instructions; loads
+spin main 2a9dce0 2a9dd38   # 9 instructions; loads
+spin main 2a9dd40 2a9dd98   # 9 instructions; loads
+spin main 2a9dda0 2a9ddf8   # 9 instructions; loads
+spin main 2a9e0c0 2a9e118   # 9 instructions; loads
+spin main 2a9e140 2a9e198   # 9 instructions; loads
+spin main 2a9e1c0 2a9e218   # 9 instructions; loads
+spin main 2a9e220 2a9e278   # 9 instructions; loads
+spin main 2a9e280 2a9e2d8   # 9 instructions; loads
+spin main 2a9e2e0 2a9e338   # 9 instructions; loads
+spin main 2b5c360 2b5c36c   # 4 instructions; loads
+spin main 2b724e8 2b724f4   # 4 instructions; loads
+spin main 2b729e0 2b729ec   # 4 instructions; loads
+spin main 2b7318c 2b73198   # 4 instructions; loads
+spin main 2bcaac4 2bcaad0   # 4 instructions; loads
+spin main 2bcf644 2bcf650   # 4 instructions; loads
+spin main 2c25600 2c2560c   # 4 instructions; loads
+spin main 2c50e0c 2c50e30   # 10 instructions; loads
+spin main 2c86f00 2c86f0c   # 4 instructions; loads
+spin main 2cb0470 2cb04c0 2cb04c8   # 15 instructions; loads
+spin main 2e18dcc 2e18e00   # 6 instructions; loads
+spin main 2e19024 2e19040   # 8 instructions; loads
+spin main 2e23d88 2e23dac   # 10 instructions; loads
+spin main 2f5164c 2f51658   # 4 instructions; loads
+spin main 307ca14 307ca1c   # 3 instructions; loads
+spin main 307cbec 307cbf4   # 3 instructions; loads
+spin main 308cea8 308ceb0   # 3 instructions; loads
+spin main 30ed86c 30ed87c   # 5 instructions; loads
+spin main 3112ab8 3112ac0   # 3 instructions; loads
+spin main 3197838 3197840   # 3 instructions; loads
+spin main 31f3d00 31f3d08   # 3 instructions; loads
+spin main 31f3d4c 31f3d54   # 3 instructions; loads
+spin main 31f4060 31f4068   # 3 instructions; loads
+spin main 31f42e8 31f42f0   # 3 instructions; loads
+spin main 321632c 3216330   # 2 instructions; loads
+spin main 321a7c0 321a7c4   # 2 instructions; loads
+spin main 321a804 321a808   # 2 instructions; loads
+spin main 32d8780 32d8788   # 3 instructions; loads
+spin main 32d8868 32d8870   # 3 instructions; loads
+spin main 32d8948 32d8950   # 3 instructions; loads
+spin main 32d8a28 32d8a30   # 3 instructions; loads
+spin main 32dab10 32dab28 32dab30   # 9 instructions; loads
+spin main 32dabb4 32dabcc 32dabd4   # 9 instructions; loads
+spin main 32dac28 32dac40 32dac48   # 9 instructions; loads
+spin main 32daca8 32dacc0 32dacc8   # 9 instructions; loads
+spin main 32dad28 32dad40 32dad48   # 9 instructions; loads
+spin main 3441168 3441170   # 3 instructions; loads
+spin main 344122c 3441234   # 3 instructions; loads
+spin main 344133c 3441344   # 3 instructions; loads
+spin main 34e65c0 34e65c8   # 3 instructions; loads
+spin main 3504a68 3504acc   # 13 instructions; loads
+spin main 353196c 3531984   # 7 instructions; loads
+spin main 357ac60 357acc0   # 12 instructions; loads
+spin main 36e01c8 36e01d0   # 3 instructions; loads
+spin main 36f6314 36f6330   # 8 instructions; loads
+spin main 36f6448 36f6464   # 8 instructions; loads
+spin main 3711ec4 3711ee4   # 3 instructions; loads
+spin main 37122a0 37122c4   # 3 instructions; loads
+spin main 388d34c 388d3a4   # 10 instructions; loads
+spin main 388e7f8 388e858   # 10 instructions; loads
+spin main 3c78ec0 3c78ec8   # 3 instructions; loads
+spin main 3c79204 3c7920c   # 3 instructions; loads
+spin main 3c79624 3c7962c   # 3 instructions; loads
+spin main 3c798a4 3c798ac   # 3 instructions; loads
+spin main 3c799f0 3c799f8   # 3 instructions; loads
+spin main 3c79b7c 3c79b84   # 3 instructions; loads
+spin main 3c79d40 3c79d48   # 3 instructions; loads
+spin main 3c7b560 3c7b568   # 3 instructions; loads
+spin main 3c7bae8 3c7baf0   # 3 instructions; loads
+spin main 3c7bd20 3c7bd28   # 3 instructions; loads
+spin main 3c7bde0 3c7bde8   # 3 instructions; loads
+spin main 3c7c040 3c7c048   # 3 instructions; loads
+spin main 3c7c100 3c7c108   # 3 instructions; loads
+spin main 3c7d40c 3c7d414   # 3 instructions; loads
+spin main 3c7d4ec 3c7d4f4   # 3 instructions; loads
+spin main 3c7e340 3c7e348   # 3 instructions; loads
+spin main 3c7e6a0 3c7e6a8   # 3 instructions; loads
+spin main 3c7e780 3c7e788   # 3 instructions; loads
+spin main 3c83a24 3c83a2c   # 3 instructions; loads
+spin main 3c83b78 3c83b80   # 3 instructions; loads
+spin main 3c83d18 3c83d20   # 3 instructions; loads
+spin main 3c866a0 3c866a8   # 3 instructions; loads
+spin main 3c867c4 3c867cc   # 3 instructions; loads
+spin main 3c86c40 3c86c48   # 3 instructions; loads
+spin main 3e9c000 3e9c044 3e9c050   # 8 instructions; loads
+spin main 3e9c068 3e9c0ac 3e9c0b8   # 8 instructions; loads
+spin main 3ea5b34 3ea5b3c   # 3 instructions; loads
+# subsdk0: 2 spin waits
+spin subsdk0 80f80 80f8c   # 4 instructions; loads
+spin subsdk0 823c4 823d4   # 5 instructions; loads
+# sdk: 4 spin waits
+spin sdk 27b0b0 27b0b8   # 3 instructions; loads
+spin sdk 34a360 34a370   # 5 instructions; loads
+spin sdk 5cfa68 5cfa80   # 7 instructions; loads
+spin sdk 747e2c 747f58 747f68   # 32 instructions; loads
